@@ -9,7 +9,7 @@ const errorText = document.querySelector('#msg-2')
 searchForm.addEventListener('submit',(e)=>{
     e.preventDefault()
     const location = input.value
-    fetch(`./weather?address=${location}`).then((response)=>{
+    fetch(`/weather?address=${location}`).then((response)=>{
         response.json().then((data)=>{
             if(data.error){
                 responseText.textContent = data.error
